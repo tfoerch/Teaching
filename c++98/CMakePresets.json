@@ -11,7 +11,7 @@
       "displayName": "DefaultGnu",
       "description": "Default build using Unix Makefiles",
       "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/../../../../build/CoAP/gcc/c++98",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++98/gcc",
       "cacheVariables": {
         "USE_CLANG": "OFF",
         "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
@@ -25,7 +25,7 @@
       "displayName": "DefaultClang",
       "description": "Default build using Unix Makefiles",
       "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/../../../../build/CoAP/clang/c++98",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++98/clang",
       "cacheVariables": {
         "USE_CLANG": "ON",
         "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",

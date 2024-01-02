@@ -7,11 +7,11 @@
   },
   "configurePresets": [
     {
-      "name": "defaultgnu",
-      "displayName": "DefaultGnu",
+      "name": "defaultgnuCpp20",
+      "displayName": "DefaultGnuCpp20",
       "description": "Default build using Unix Makefiles",
       "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/../../../../build/CoAP/gcc/c++17",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++20/gcc",
       "cacheVariables": {
         "USE_CLANG": "OFF",
         "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
@@ -25,7 +25,7 @@
       "displayName": "DefaultGnuCpp17",
       "description": "Default build using Unix Makefiles",
       "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/../../../../build/CoAP/gcc/c++17",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++17/gcc",
       "cacheVariables": {
         "USE_CLANG": "OFF",
         "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
@@ -35,11 +35,11 @@
       }
     },
     {
-      "name": "defaultclang",
-      "displayName": "DefaultClang",
+      "name": "defaultclangCpp20",
+      "displayName": "DefaultClangCpp20",
       "description": "Default build using Unix Makefiles",
       "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/../../../../build/CoAP/clang/c++17",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++20/clang",
       "cacheVariables": {
         "USE_CLANG": "ON",
         "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
@@ -53,7 +53,7 @@
       "displayName": "DefaultClangCpp17",
       "description": "Default build using Unix Makefiles",
       "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/../../../../build/CoAP/clang/c++17",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++17/clang",
       "cacheVariables": {
         "USE_CLANG": "ON",
         "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
