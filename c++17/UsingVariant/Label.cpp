@@ -1,9 +1,8 @@
 #include "Label.hpp"
 
-namespace
-{
-  template<class... Ts> struct Overload : Ts... { using Ts::operator()...; };
-  template<class... Ts> Overload(Ts...) -> Overload<Ts...>;
+namespace {
+template<class... Ts> struct Overload : Ts... { using Ts::operator()...; };
+template<class... Ts> Overload(Ts...) -> Overload<Ts...>;
 }
 
 Label::Label(ServiceType serviceType, const TributarySlots& tributarySlots)

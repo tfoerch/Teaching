@@ -7,13 +7,10 @@
 
 class MsgBuffer;
 
-namespace label
-{
-  namespace impl
-  {
-    class LabelImplBase;
-  }
-}
+namespace label {
+namespace impl {
+class LabelImplBase;
+} }
 
 class Label
 {

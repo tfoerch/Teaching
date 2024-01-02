@@ -1,7 +1,6 @@
 #include "LabelOTN.hpp"
 
-namespace label
-{
+namespace label {
 
 LabelOTN::LabelOTN(ServiceType serviceType, const TributarySlots& tributarySlots)
 : m_serviceType(serviceType),
@@ -19,5 +18,4 @@ auto LabelOTN::encode(MsgBuffer&  /*buffer*/) const -> bool // NOLINT(readabilit
   return true;
 }
 
-
-}; // namespace label
+} // namespace label

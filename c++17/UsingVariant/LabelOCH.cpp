@@ -1,7 +1,6 @@
 #include "LabelOCH.hpp"
 
-namespace label
-{
+namespace label {
 
 LabelOCH::LabelOCH(const FrequencySlot& frequencySlot)
 : m_frequencySlot(frequencySlot)
@@ -17,4 +16,4 @@ auto LabelOCH::encode(MsgBuffer&  /*buffer*/) const -> bool // NOLINT(readabilit
   return true;
 }
 
-}; // namespace label
+} // namespace label

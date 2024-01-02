@@ -25,9 +25,9 @@ public:
   virtual auto encode(MsgBuffer&  buffer) const -> bool = 0;
 };
 
-namespace label
-{
-  using LabelIFPtr = std::unique_ptr<LabelIF>;
+namespace label {
+
+using LabelIFPtr = std::unique_ptr<LabelIF>;
 };
 
 #endif /* LABELIF_HPP */

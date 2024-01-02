@@ -1,7 +1,6 @@
 #include "LabelOTNImpl.hpp"
 
-namespace label::impl
-{
+namespace label::impl {
 
 LabelOTNImpl::LabelOTNImpl(ServiceType serviceType, const TributarySlots& tributarySlots)
 : m_serviceType(serviceType),

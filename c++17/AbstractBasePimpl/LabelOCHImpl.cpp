@@ -1,7 +1,6 @@
 #include "LabelOCHImpl.hpp"
 
-namespace label::impl
-{
+namespace label::impl {
 
 LabelOCHImpl::LabelOCHImpl(const FrequencySlot& frequencySlot)
 : m_frequencySlot(frequencySlot)
