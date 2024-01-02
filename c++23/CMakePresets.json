@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 19,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "Default",
+      "description": "Default build using Unix Makefiles",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/../../../../build/CoAP/gcc/c++23",
+      "cacheVariables": {
+        "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -fconcepts-diagnostics-depth=8 -Og",
+        "CMAKE_CXX_STANDARD": "23",
+        "CMAKE_CXX_STANDARD_REQUIRED": "YES",
+        "CMAKE_CXX_EXTENSIONS": "OFF"
+      }
+    },
+    {
+      "name": "defaultCpp17",
+      "displayName": "Default",
+      "description": "Default build using Unix Makefiles",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/../../../../build/CoAP/clang/c++17",
+      "cacheVariables": {
+        "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
+        "CMAKE_CXX_STANDARD": "17",
+        "CMAKE_CXX_STANDARD_REQUIRED": "YES",
+        "CMAKE_CXX_EXTENSIONS": "OFF"
+      }
+    }
+  ]
+}
+
