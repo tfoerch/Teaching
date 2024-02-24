@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 19,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "defaultgnuCpp20",
+      "displayName": "DefaultGnuCpp20",
+      "description": "Default build using Unix Makefiles",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++20/gcc",
+      "cacheVariables": {
+        "USE_CLANG": "OFF",
+        "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
+        "CMAKE_CXX_STANDARD": "20",
+        "CMAKE_CXX_STANDARD_REQUIRED": "YES",
+        "CMAKE_CXX_EXTENSIONS": "OFF"
+      }
+    },
+    {
+      "name": "defaultgnuCpp17",
+      "displayName": "DefaultGnuCpp17",
+      "description": "Default build using Unix Makefiles",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++17/gcc",
+      "cacheVariables": {
+        "USE_CLANG": "OFF",
+        "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
+        "CMAKE_CXX_STANDARD": "17",
+        "CMAKE_CXX_STANDARD_REQUIRED": "YES",
+        "CMAKE_CXX_EXTENSIONS": "OFF"
+      }
+    },
+    {
+      "name": "defaultclangCpp20",
+      "displayName": "DefaultClangCpp20",
+      "description": "Default build using Unix Makefiles",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++20/clang",
+      "cacheVariables": {
+        "USE_CLANG": "ON",
+        "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
+        "CMAKE_CXX_STANDARD": "20",
+        "CMAKE_CXX_STANDARD_REQUIRED": "YES",
+        "CMAKE_CXX_EXTENSIONS": "OFF"
+      }
+    },
+    {
+      "name": "defaultclangCpp17",
+      "displayName": "DefaultClangCpp17",
+      "description": "Default build using Unix Makefiles",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++17/clang",
+      "cacheVariables": {
+        "USE_CLANG": "ON",
+        "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
+        "CMAKE_CXX_STANDARD": "17",
+        "CMAKE_CXX_STANDARD_REQUIRED": "YES",
+        "CMAKE_CXX_EXTENSIONS": "OFF"
+      }
+    }
+  ]
+}
