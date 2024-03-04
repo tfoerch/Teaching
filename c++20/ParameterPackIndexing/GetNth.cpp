@@ -1,7 +1,7 @@
 #include <utility>
 #include <iostream>
 
-#if !__cpp_pack_indexing
+#if __cpp_generic_lambdas && !__cpp_pack_indexing
 template<std::size_t>
 struct dummy { constexpr dummy(auto&&){}; };
 #endif // __cpp_pack_indexing 
@@ -9,8 +9,8 @@ struct dummy { constexpr dummy(auto&&){}; };
 template <std::size_t N, typename... Args>
 constexpr decltype(auto) nth_element(Args&&... args) {
 #if __cpp_pack_indexing
-    return std::forward<Args...[N](args...[N]);
-#else
+    return std::forward<Args...[N]>(args...[N]);
+#elif __cpp_generic_lambdas
     return [&]<std::size_t... Is>(std::index_sequence<Is...>) -> decltype(auto) {
         return [](dummy<Is> ..., auto&& arg, auto&&...) -> decltype(auto) {
             return std::forward<decltype(arg)>(arg);
@@ -23,7 +23,7 @@ int main()
 {
 #if __cpp_pack_indexing
     std::cout << "using C++-26 pack indexing\n";
-#else
+#elif __cpp_generic_lambdas
     std::cout << "using C++-20 lambda with explicit template parameter list\n";
 #endif // __cpp_pack_indexing
 

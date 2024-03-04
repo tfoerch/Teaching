@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <cassert>
+#include <algorithm>
 
 namespace {
 
@@ -75,6 +76,7 @@ auto main() -> int // NOLINT(bugprone-exception-escape)
                  [](const auto& entry)
                  { return ( entry.getServiceType() == ServiceType::odu0 ||
                             entry.getServiceType() == ServiceType::odu2e );});
+
   }
   using TribSlotInitListConstRef = std::reference_wrapper<const std::initializer_list<uint32_t>>;
   using Layer1LabelParams = std::pair<ServiceType, TribSlotInitListConstRef>;

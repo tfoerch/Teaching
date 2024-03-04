@@ -11,11 +11,11 @@
       "displayName": "DefaultGnu",
       "description": "Default build using Unix Makefiles",
       "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/../../../build/Teaching/c++20/gcc",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++14/gcc",
       "cacheVariables": {
         "USE_CLANG": "OFF",
         "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
-        "CMAKE_CXX_STANDARD": "20",
+        "CMAKE_CXX_STANDARD": "14",
         "CMAKE_CXX_STANDARD_REQUIRED": "YES",
         "CMAKE_CXX_EXTENSIONS": "OFF"
       }
@@ -25,11 +25,11 @@
       "displayName": "DefaultClang",
       "description": "Default build using Unix Makefiles",
       "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/../../../build/Teaching/c++20/clang",
+      "binaryDir": "${sourceDir}/../../../build/Teaching/c++14/clang",
       "cacheVariables": {
         "USE_CLANG": "ON",
         "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
-        "CMAKE_CXX_STANDARD": "20",
+        "CMAKE_CXX_STANDARD": "14",
         "CMAKE_CXX_STANDARD_REQUIRED": "YES",
         "CMAKE_CXX_EXTENSIONS": "OFF"
       }

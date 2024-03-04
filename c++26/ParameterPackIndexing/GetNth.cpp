@@ -1,6 +1,7 @@
 #include <utility>
 #include <iostream>
 
+// #define __cpp_pack_indexing 1 // work-around until feature testing is also working
 #if !__cpp_pack_indexing
 template<std::size_t>
 struct dummy { constexpr dummy(auto&&){}; };
@@ -9,7 +10,7 @@ struct dummy { constexpr dummy(auto&&){}; };
 template <std::size_t N, typename... Args>
 constexpr decltype(auto) nth_element(Args&&... args) {
 #if __cpp_pack_indexing
-    return std::forward<Args...[N](args...[N]);
+    return std::forward<Args...[N]>(args...[N]);
 #else
     return [&]<std::size_t... Is>(std::index_sequence<Is...>) -> decltype(auto) {
         return [](dummy<Is> ..., auto&& arg, auto&&...) -> decltype(auto) {
