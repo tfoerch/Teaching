@@ -19,5 +19,6 @@ set(CMAKE_VERBOSE_BUILD ON)
 # add_subdirectory(PlainAbstractBase)
 # add_subdirectory(TypeErasure)
 add_subdirectory(ParameterPackIndexing)
+add_subdirectory(ParameterPackIndexingCheckGenericLambdaFeature)
 
 include_directories ("${PROJECT_SOURCE_DIR}")
