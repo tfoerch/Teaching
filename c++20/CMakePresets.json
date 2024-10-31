@@ -13,11 +13,14 @@
       "generator": "Unix Makefiles",
       "binaryDir": "${sourceDir}/../../../build/Teaching/c++20/gcc",
       "cacheVariables": {
-        "USE_CLANG": "OFF",
-        "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
+        "CMAKE_CXX_FLAGS": "-O2 -Wall -Wformat -Wformat=2 -Wconversion -Wimplicit-fallthrough -Werror=format-security -pedantic -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -fstrict-flex-arrays=3 -fstack-clash-protection -fstack-protector-strong",
+        "CMAKE_EXE_LINKER_FLAGS": "-Wl,-z,nodlopen -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now",
         "CMAKE_CXX_STANDARD": "20",
         "CMAKE_CXX_STANDARD_REQUIRED": "YES",
-        "CMAKE_CXX_EXTENSIONS": "OFF"
+        "CMAKE_CXX_EXTENSIONS": "OFF",
+        "CMAKE_C_COMPILER": "/usr/bin/gcc-14",
+        "CMAKE_CXX_COMPILER": "/usr/bin/g++-14",
+        "CMAKE_CXX_CLANG_TIDY": "/usr/bin/clang-tidy-20"
       }
     },
     {
@@ -27,11 +30,14 @@
       "generator": "Unix Makefiles",
       "binaryDir": "${sourceDir}/../../../build/Teaching/c++20/clang",
       "cacheVariables": {
-        "USE_CLANG": "ON",
-        "CMAKE_CXX_FLAGS": "-Werror -Wall -Wextra -pedantic -Og",
+        "CMAKE_CXX_FLAGS": "-O2 -Wall -Wformat -Wformat=2 -Wconversion -Wimplicit-fallthrough -Werror=format-security -pedantic -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS -fstrict-flex-arrays=3 -fstack-clash-protection -fstack-protector-strong",
+        "CMAKE_EXE_LINKER_FLAGS": "-Wl,-z,nodlopen -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now",
         "CMAKE_CXX_STANDARD": "20",
         "CMAKE_CXX_STANDARD_REQUIRED": "YES",
-        "CMAKE_CXX_EXTENSIONS": "OFF"
+        "CMAKE_CXX_EXTENSIONS": "OFF",
+        "CMAKE_C_COMPILER": "/usr/bin/clang-20",
+        "CMAKE_CXX_COMPILER": "/usr/bin/clang++-20",
+        "CMAKE_CXX_CLANG_TIDY": "/usr/bin/clang-tidy-20"
       }
     }
   ]

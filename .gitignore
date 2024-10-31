@@ -2,3 +2,6 @@
 .cproject
 .project
 .settings/
+.vscode/
+.cache/
+compile_commands.json
